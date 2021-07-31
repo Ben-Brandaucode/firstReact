@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardText,
   CardBody,
   CardTitle,
@@ -10,6 +9,8 @@ import {
 
 class CampsiteInfo extends Component {
   renderCampsite(campsite) {
+    console.log (campsite);
+  
     return (
       <div className="col-md-5 m-1">
         <Card>
@@ -50,12 +51,16 @@ class CampsiteInfo extends Component {
   }
 
   render() {
-    if (this.props.campsite !== null) {
-      return (<div className="row">
-          {this.renderCampsite(this.props.campsite)}
-          {this.renderComments(this.props.campsite.commentsgit )}
-          </div>);
-    } else {
+    if (this.props.campsite  ) {
+      return (
+        <div className= "container" >
+          <div className="row">
+            {this.renderCampsite(this.props.campsite)}
+            {this.renderComments(this.props.campsite.comments )}
+            </div>
+        </div> );
+    } 
+    else {
       return <div></div>;
     }
   }
