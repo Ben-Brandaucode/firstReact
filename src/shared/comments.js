@@ -1,3 +1,4 @@
+//exports {COMMENTS} to redux/comments.js which
 export const COMMENTS = 
 [
     {
