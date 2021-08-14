@@ -6,9 +6,6 @@ import {fadeTransform} from 'react-animation-components';
 import { Loading } from './LoadingComponent';
 
 
-
-
-
 function About(props) {
 
     const partners = props.partners.map(partner => {
