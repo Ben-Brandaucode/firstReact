@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import { LocalForm, Errors, Control } from "react-redux-form";
 import Label from "reactstrap/lib/Label";
 import { Loading } from "./LoadingComponent";
+import {baseUrl } from '../shared/baseUrl';
 
 
 const maxLength = (len) => (val) => !val || val.length <= len;
@@ -132,7 +133,7 @@ function RenderCampsite({ campsite }) {
   return (
     <div className="col-md-5 m-1">
       <Card>
-        <CardImg top src={campsite.image} alt={campsite.name} />
+        <CardImg top src={baseUrl +campsite.image} alt={campsite.name} />
         <CardBody>
           <CardText>{campsite.description}</CardText>
         </CardBody>
